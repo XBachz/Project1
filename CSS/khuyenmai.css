@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+.header .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #666;
+}
+.header .top-bar a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.header .top-bar a:hover {
+    text-decoration: underline;
+}
+.header .logo-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.header .logo-search .logo {
+    font-size: 24px;
+    color: #ff6600;
+    font-weight: bold;
+}
+.header .logo-search .search-bar {
+    flex-grow: 1;
+    margin: 0 20px;
+    position: relative;
+}
+.header .logo-search .search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.header .logo-search .search-bar .fa-search {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+.header .logo-search .hotline {
+    color: #ff6600;
+    font-size: 16px;
+}
+.header .logo-search .cart {
+    color: #ff6600;
+    font-size: 16px;
+    margin-left: 20px;
+}
+.nav-bar {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-bar .menu {
+    display: flex;
+    align-items: center;
+}
+.nav-bar .menu .fa-bars {
+    font-size: 20px;
+    margin-right: 10px;
+}
+.nav-bar .menu span {
+    font-size: 16px;
+    font-weight: bold;
+}
+.nav-bar .promo {
+    color: #ff6600;
+    font-size: 16px;
+}
+.header .top-bar1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+}
+.header .top-bar1 a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.header .top-bar1 a:hover {
+    text-decoration: underline;
+}
+.container {
+    width: 90%;
+    margin: 20px auto;
+}
+.header1 {
+    background-color: #ff6600;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+.promotion {
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.promotion img {
+    max-width: 100%;
+    height: auto;
+}
+.promotion-title {
+    color: #ff6600;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.promotion-date {
+    color: #666;
+    font-size: 14px;
+    margin: 5px 0;
+}
+.promotion-detail {
+    color: #ff6600;
+    font-size: 14px;
+    margin: 5px 0;
+}
+.promotion-detail a {
+    color: #ff6600;
+    text-decoration: none;
+}
+.promotion-detail a:hover {
+    text-decoration: underline;
+}
+.promotion-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.promotion-item {
+    width: 48%;
+    margin-bottom: 20px;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+}
+.footer-column {
+    width: 23%;
+}
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.footer-column p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+.footer-column img {
+    width: 100%;
+}
+.footer-social {
+    display: flex;
+    align-items: center;
+    margin-left: 70%;
+}
+.footer-social img {
+    width: 30px;
+    margin-right: 10px;
+}
+.container2 {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.info-table tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+.info-table td {
+    padding: 10px 0;
+}
+.info-table td:first-child {
+    font-weight: bold;
+    width: 200px;
+}
+.info-table a {
+    color: #007bff;
+    text-decoration: none;
+}
+.info-table a:hover {
+    text-decoration: underline;
+}
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 40px;
+}

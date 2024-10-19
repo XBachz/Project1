@@ -1,0 +1,317 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+.header {
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;  
+}
+.header .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #666;
+}
+.header .top-bar a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.header .top-bar a:hover {
+    text-decoration: underline;
+}
+.header .logo-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.header .logo-search .logo {
+    font-size: 24px;
+    color: #ff6600;
+    font-weight: bold;
+}
+.header .logo-search .search-bar {
+    flex-grow: 1;
+    margin: 0 20px;
+    position: relative;
+}
+.header .logo-search .search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.header .logo-search .search-bar .fa-search {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+.header .logo-search .hotline {
+    color: #ff6600;
+    font-size: 16px;
+}
+.header .logo-search .cart {
+    color: #ff6600;
+    font-size: 16px;
+    margin-left: 20px;
+}
+.nav-bar {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-bar .menu {
+    display: flex;
+    align-items: center;
+}
+.nav-bar .menu .fa-bars {
+    font-size: 20px;
+    margin-right: 10px;
+}
+.nav-bar .menu span {
+    font-size: 16px;
+    font-weight: bold;
+}
+.nav-bar .promo {
+    color: #ff6600;
+    font-size: 16px;
+}
+.main-content {
+    display: flex;
+    padding: 20px;
+}
+.sidebar {
+    width: 20%;
+    background-color: #fff;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+.sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+}
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+.sidebar .ad {
+    margin-top: 20px;
+}
+.sidebar .ad img {
+    width: 100%;
+}
+.content {
+    width: 80%;
+    padding: 20px;
+}
+.content .banner {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.content .banner img {
+    width: 100%;
+}
+.content .new-books {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+.content .new-books h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.content .new-books .book-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.content .new-books .book-item {
+    width: 20%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.content .new-books .book-item img {
+    width: 100%;
+    height: auto;
+}
+.content .new-books .book-item p {
+    margin: 10px 0;
+}
+.content .new-books .book-item .price {
+    color: #ff6600;
+    font-weight: bold;
+}
+.header .top-bar1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+}
+.header .top-bar1 a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.header .top-bar1 a:hover {
+    text-decoration: underline;
+}
+.container {
+    padding: 20px;
+    margin-left: 50%;
+    margin-top: -4%;
+
+}
+.pagination {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+.pagination li {
+    margin: 0 5px;
+}
+.pagination a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.pagination a.active {
+    background-color: #ff5722;
+    color: white;
+    border: 1px solid #ff5722;
+}
+.pagination a:hover {
+    background-color: #ddd;
+}
+.content {
+    margin-top: 20px;
+}
+.content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.content p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.content p strong {
+    font-weight: bold;
+}
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #333;
+}
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.footer .column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 0;
+}
+.footer .column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.footer .column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer .column ul li {
+    margin-bottom: 5px;
+}
+.footer .column ul li a {
+    text-decoration: none;
+    color: #333;
+}
+.footer .column ul li a:hover {
+    text-decoration: underline;
+}
+.footer .social-icons {
+    display: flex;
+    align-items: center;
+}
+.footer .social-icons a {
+    color: #333;
+    margin-right: 20px;
+    font-size: 30px;
+    margin-left: 16%;
+}
+.footer .social-icons a:hover {
+    color: #007bff;
+}
+.footer .license {
+    margin-top: 20px;
+}
+.footer .license p {
+    margin: 0;
+}
+.footer .newsletter {
+    margin-top: 20px;
+}
+.footer .newsletter p {
+    margin: 0 0 10px;
+}
+.footer .newsletter input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 110px);
+    margin-right: 10px;
+}
+.footer .newsletter button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #dc3545;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.footer .newsletter button:hover {
+    background-color: #c82333;
+}
+.footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666;
+}
+#banner{
+    background: url(http://127.0.0.1:5500/Trangchu.html);
+    min-height: 100px;
+    width: 100%;
+}
