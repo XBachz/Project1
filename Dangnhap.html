@@ -3,26 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Đăng nhập</title>
     <link rel="stylesheet" href="CSS/dangnhap.css">
     <link rel="stylesheet" href="font/css/all.css">
 </head>
 <body>
     <div class="login-container">
         <h2>Đăng nhập</h2>
-        <a href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNzI5MjQ2MDk5LCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D" class="facebook-login"><i class="fa-brands fa-facebook"></i> Đăng nhập bằng tài khoản Facebook</a>
+        <a href="https://www.facebook.com/login" class="facebook-login"><i class="fa-brands fa-facebook"></i> Đăng nhập bằng tài khoản Facebook</a>
         <div class="separator"><span>hoặc đăng nhập dùng email</span></div>
-        <form>
-            <input type="email" placeholder="Email" required>
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Email" required>
             <div class="password-container">
-                <input type="password" placeholder="Mật khẩu" required>
-            <a href="#" class="Quên mật khẩu"><i class="fa-solid fa-circle-question" title="Quên mật khẩu? Click vào đây để reset mật khẩu"></i></a>
+                <input type="password" id="password" placeholder="Mật khẩu" required>
+                <a href="#" class="Quên mật khẩu"><i class="fa-solid fa-circle-question" title="Quên mật khẩu? Click vào đây để reset mật khẩu"></i></a>
             </div>
             <button type="submit" class="login-button">Đăng nhập</button>
         </form>
         <div class="register-link">
-            Chưa có tài khoản ? <a href="Dangky.html">Đăng ký tại đây</a>
+            Chưa có tài khoản? <a href="Dangky.html">Đăng ký tại đây</a>
         </div>
     </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngăn chặn gửi form
+
+            // Lấy giá trị email và mật khẩu
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Kiểm tra thông tin đăng nhập (ví dụ đơn giản)
+            if (email === "elainachan24@gmail.com" && password === "123456") {
+                alert("Đăng nhập thành công!");
+                // Có thể chuyển hướng đến trang chính ở đây
+                 window.location.href = "Trangchu.html";
+            } else {
+                alert("Tên đăng nhập hoặc mật khẩu không đúng.");
+            }
+        });
+    </script>
 </body>
 </html>
+

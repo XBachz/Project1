@@ -31,11 +31,15 @@
      <i class="fa-solid fa-tags"></i>
       Khuyến mãi
      </a>
+     <a href="Nhantin.html">
+      <i class="fa-regular fa-envelope"></i>
+        Nhận tin
+      </a>
     </div>
     <div>
      <a href="#">
      <i class="fa-solid fa-gift"></i>
-      Ưu đãi &amp; tiện ích
+      Ưu đãi &amp; tiện ích 
      </a>
      <a href="Kiemtra.html">
      <i class="fa-solid fa-truck-fast"></i>
@@ -166,15 +170,36 @@
      </li>
     </ul>
     <div class="ad">
-     <a herf="https://www.facebook.com/bach.ha.58511276">
-        <img src="Media/Face.png" alt="">
-     </a>
-    </div>
+      <a href="https://www.facebook.com/bach.ha.58511276">
+          <img src="Media/Face.png" alt="">
+      </a>
+  </div>
    </div>
    <div class="content">
     <div class="banner">
-     <img alt="Banner" height="450" src="Media/bia1.jpg" width="800"/>
-    </div>
+      <a href="Truyen1.html">
+          <img src="Media/bia1.jpg" alt="Banner 1" class="active" />
+      </a>
+      <a href="Truyen1.html">
+          <img src="Media/bia2.jpg" alt="Banner 2" />
+      </a>
+      <a href="Truyen1.html">
+          <img src="Media/bia3.png" alt="Banner 3" />
+      </a>
+  </div>
+  <script>
+    const images = document.querySelectorAll('.banner img');
+    let currentIndex = 0;
+
+    function changeImage() {
+        images[currentIndex].classList.remove('active'); // Ẩn hình ảnh hiện tại
+        currentIndex = (currentIndex + 1) % images.length; // Chuyển đến hình ảnh tiếp theo
+        images[currentIndex].classList.add('active'); // Hiển thị hình ảnh tiếp theo
+    }
+
+    // Chuyển đổi hình ảnh mỗi 3 giây
+    setInterval(changeImage, 4000); // Thay đổi thời gian tại đây (3000 ms )
+    </script>
     <div class="new-books">
      <h3>
       Truyện tranh mới
@@ -300,7 +325,7 @@
 </div>
   <div class="container">
     <ul class="pagination">
-        <li><a href="#" class="active">1</a></li>
+        <li><a href="Trangchu.html" class="active">1</a></li>
         <li><a href="#">2</a></li>
         <li><a href="#">3</a></li>
         <li><a href="#">4</a></li>
@@ -318,7 +343,7 @@
       </h3>
       <ul>
        <li>
-        <a href="#">
+        <a href="#  ">
          Điều khoản sử dụng
         </a>
        </li>
@@ -416,29 +441,6 @@
         </i>
        </a>
       </div>
-     </div>
-    </div>
-    <div class="container">
-     <div class="column license">
-      <h3>
-       GIẤY PHÉP THÀNH LẬP TRANG WEB
-      </h3>
-      <p>
-       Giấy phép: ngày 6/10/2018 của Bộ Thông tin và Truyền thông
-      </p>
-      <img alt="Đã thông báo Bộ Công Thương" height="150" src="Media/logo.jpg" width="300"/>
-     </div>
-     <div class="column newsletter">
-      <h3>
-       ĐĂNG KÝ NHẬN TIN
-      </h3>
-      <p>
-       Hãy nhập địa chỉ email của bạn vào ô dưới đây để có thể nhận được tất cả các tin tức mới nhất của shop về các sản phẩm mới, các chương trình khuyến mãi mới. BookJP.vn xin đảm bảo sẽ không gửi mail rác, mail spam tới bạn.
-      </p>
-      <input placeholder="Nhập email của bạn..." type="email"/>
-      <button>
-       ĐĂNG KÝ
-      </button>
      </div>
     </div>
     <div class="container">
