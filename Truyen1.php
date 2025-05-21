@@ -1,3 +1,18 @@
+<?php
+session_start();
+require_once 'cart.php';
+
+$cart = new Cart();
+$session_id = session_id();
+$cart_items = $cart->get_cart_items_session($session_id);
+
+$totalQuantity = 0;
+if (!empty($cart_items)) {
+    foreach ($cart_items as $item) {
+        $totalQuantity += (int)$item['quantity'];
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,27 +25,32 @@
         BookJP.vn
     </title>
 </head>
+<?php
+      if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+?>
 <body>
   <div class="header">
    <div class="top-bar">
     <div>
-      <a href="Trangchu.html">
+      <a href="Trangchudex.php">
       <i class="fa-solid fa-house-user"></i>
         Trang chủ
       </a>
-      <a href="Trogiup.html">
+      <a href="Trogiup.php">
       <i class="fa-solid fa-exclamation"></i>
        Trợ giúp
       </a>
-      <a href="Tintuc.html">
+      <a href="Tintuc.phh">
       <i class="fa-regular fa-newspaper"></i>
        Tin tức
       </a>
-      <a href="Khuyenmai.html">
+      <a href="Khuyenmai.php">
       <i class="fa-solid fa-tags"></i>
        Khuyến mãi
       </a>
-      <a href="Nhantin.html">
+      <a href="Nhantin.php">
       <i class="fa-regular fa-envelope"></i>
        Nhận tin
       </a>
@@ -40,18 +60,25 @@
       <i class="fa-solid fa-gift"></i>
        Ưu đãi &amp; tiện ích
       </a>
-      <a href="Kiemtra.html">
+      <a href="Kiemtra.php">
       <i class="fa-solid fa-truck-fast"></i>
        Kiểm tra đơn hàng
       </a>
-      <a href="Dangnhap.html">
-      <i class="fa-solid fa-arrow-right-to-bracket"></i>
-       Đăng nhập
-      </a>
-      <a href="Dangky.html">
-      <i class="fa-regular fa-user"></i>
-       Đăng ký
-      </a>
+      <?php if (isset($_SESSION['dn'])): ?>
+        <div class="dropdown">
+          <button class="dropbtn">
+            <i class="fa-solid fa-user"></i> Xin chào, <?= htmlspecialchars($_SESSION['dn']) ?> <i class="fa-solid fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+          <a href="thongtintaikhoan.php"><i class="fa-solid fa-id-card"></i> Thông tin tài khoản</a>
+          <a href="capnhatthongtin.php"><i class="fa-solid fa-pen-to-square"></i> Cập nhật thông tin</a>
+          <a href="doimatkhau.php"><i class="fa-solid fa-key"></i> Đổi mật khẩu</a>
+          <a href="trangchu.php"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
+          </div>
+        </div>
+      <?php else: ?>
+        <a href="dangnhap.php"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a>
+      <?php endif; ?>
      </div>
     </div>
    <div class="logo-search">
@@ -63,12 +90,9 @@
     </div>
     <div class="top-bar1">
     <div class="cart">
-     <i class="fa-solid fa-cart-shopping">
-     </i>
-    <a href="#">
-     Giỏ hàng (0)
-    </a>
-    </div>
+    <i class="fa-solid fa-cart-shopping"></i>
+    <a href="Giohang.php">Giỏ hàng (<?= $totalQuantity ?>)</a>
+</div>
    </div>
   </div>
   </div>
@@ -119,23 +143,46 @@
           </span>
          </div>
          <div class="quantity">
-          Số Lượng:
-          <button>
-           -
-          </button>
-          <input type="text" value="1"/>
-          <button>
-           +
-          </button>
-         </div>
-         <div class="buttons">
-          <button class="add-to-cart">
-           <a href="Giohang.html" style="color: #ff6600 " >THÊM VÀO GIỎ HÀNG </a>
-          </button>
-          <button class="buy-now">
-           MUA NGAY
-          </button>
-         </div>
+  Số Lượng:
+  <button type="button" id="decrease">-</button>
+  <input type="text" id="quantity-input" value="1" readonly style="width: 40px; text-align: center;"/>
+  <button type="button" id="increase">+</button>
+</div>
+<script>
+  const input = document.getElementById('quantity-input');
+  const increaseBtn = document.getElementById('increase');
+  const decreaseBtn = document.getElementById('decrease');
+
+  increaseBtn.addEventListener('click', () => {
+    let currentValue = parseInt(input.value);
+    input.value = currentValue + 1;
+  });
+
+  decreaseBtn.addEventListener('click', () => {
+    let currentValue = parseInt(input.value);
+    if (currentValue > 1) {
+      input.value = currentValue - 1;
+    }
+  });
+  const addToCartButton = document.querySelector('.add-to-cart');
+const quantityInput = document.getElementById('quantity-input');
+const quantityInputHidden = document.getElementById('quantity-input-hidden');
+
+addToCartButton.addEventListener('click', (event) => {
+    quantityInputHidden.value = quantityInput.value;
+});
+</script>
+<div class="buttons">
+    <form action="cart.php" method="post">
+        <input type="hidden" name="product_id" value="1"> <input type="hidden" name="quantity" id="quantity-input-hidden" value="1">
+        <button type="submit" class="add-to-cart">
+            THÊM VÀO GIỎ HÀNG
+        </button>
+    </form>
+    <button class="buy-now">
+        MUA NGAY
+    </button>
+</div>
          <div class="contact-info">
           Gọi đặt hàng: (028) 3820 7153 hoặc 0339 724 217
          </div>

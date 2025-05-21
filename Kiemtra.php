@@ -10,27 +10,32 @@
         BookJP.vn
     </title>
 </head>
+<?php
+      if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+?>
 <body>
   <div class="header">
    <div class="top-bar">
     <div>
-      <a href="Trangchu.html">
+      <a href="Trangchudex.php">
       <i class="fa-solid fa-house-user"></i>
         Trang chủ
       </a>
-      <a href="Trogiup.html">
+      <a href="Trogiup.php">
       <i class="fa-solid fa-exclamation"></i>
        Trợ giúp
       </a>
-      <a href="Tintuc.html">
+      <a href="Tintuc.php">
       <i class="fa-regular fa-newspaper"></i>
        Tin tức
       </a>
-      <a href="Khuyenmai.html">
+      <a href="Khuyenmai.php">
       <i class="fa-solid fa-tags"></i>
        Khuyến mãi
       </a>
-      <a href="Nhantin.html">
+      <a href="Nhantin.php">
       <i class="fa-regular fa-envelope"></i>
        Nhận tin
       </a>
@@ -40,18 +45,25 @@
       <i class="fa-solid fa-gift"></i>
        Ưu đãi &amp; tiện ích
       </a>
-      <a href="Kiemtra.html">
+      <a href="Kiemtra.php">
       <i class="fa-solid fa-truck-fast"></i>
        Kiểm tra đơn hàng
       </a>
-      <a href="Dangnhap.html">
-      <i class="fa-solid fa-arrow-right-to-bracket"></i>
-       Đăng nhập
-      </a>
-      <a href="Dangky.html">
-      <i class="fa-regular fa-user"></i>
-       Đăng ký
-      </a>
+      <?php if (isset($_SESSION['dn'])): ?>
+        <div class="dropdown">
+          <button class="dropbtn">
+            <i class="fa-solid fa-user"></i> Xin chào, <?= htmlspecialchars($_SESSION['dn']) ?> <i class="fa-solid fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+          <a href="thongtintaikhoan.php"><i class="fa-solid fa-id-card"></i> Thông tin tài khoản</a>
+          <a href="capnhatthongtin.php"><i class="fa-solid fa-pen-to-square"></i> Cập nhật thông tin</a>
+          <a href="doimatkhau.php"><i class="fa-solid fa-key"></i> Đổi mật khẩu</a>
+          <a href="trangchu.php"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
+          </div>
+        </div>
+      <?php else: ?>
+        <a href="dangnhap.php"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a>
+      <?php endif; ?>
      </div>
     </div>
    <div class="logo-search">

@@ -10,11 +10,16 @@
         BookJP.vn
     </title>
 </head>
+<?php
+      if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+?>
 <body>
   <div class="header">
    <div class="top-bar">
     <div>
-      <a href="Trangchu.html">
+      <a href="Trangchudex.php">
       <i class="fa-solid fa-house-user"></i>
         Trang chủ
       </a>
@@ -44,14 +49,21 @@
       <i class="fa-solid fa-truck-fast"></i>
        Kiểm tra đơn hàng
       </a>
-      <a href="Dangnhap.html">
-      <i class="fa-solid fa-arrow-right-to-bracket"></i>
-       Đăng nhập
-      </a>
-      <a href="Dangky.html">
-      <i class="fa-regular fa-user"></i>
-       Đăng ký
-      </a>
+      <?php if (isset($_SESSION['dn'])): ?>
+        <div class="dropdown">
+          <button class="dropbtn">
+            <i class="fa-solid fa-user"></i> Xin chào, <?= htmlspecialchars($_SESSION['dn']) ?> <i class="fa-solid fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+          <a href="thongtintaikhoan.php"><i class="fa-solid fa-id-card"></i> Thông tin tài khoản</a>
+          <a href="capnhatthongtin.php"><i class="fa-solid fa-pen-to-square"></i> Cập nhật thông tin</a>
+          <a href="doimatkhau.php"><i class="fa-solid fa-key"></i> Đổi mật khẩu</a>
+          <a href="trangchu.php"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
+          </div>
+        </div>
+      <?php else: ?>
+        <a href="dangnhap.php"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a>
+      <?php endif; ?>
      </div>
     </div>
    <div class="logo-search">
@@ -130,8 +142,8 @@
          </div>
          <div class="buttons">
           <button class="add-to-cart">
-           THÊM VÀO GIỎ HÀNG
-          </button>
+            <a href="Giohang.html" style="color: #ff6600 " >THÊM VÀO GIỎ HÀNG </a>
+           </button>
           <button class="buy-now">
            MUA NGAY
           </button>

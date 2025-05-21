@@ -8,30 +8,30 @@
     <link rel="stylesheet" href="font/css/all.css">
     <base herf="http://127.0.0.1:5500/Trangchu.html">
     <title>
-        BookJP.vn
+    BookJP.vn
     </title>
 </head>
  <body>
   <div class="header">
    <div class="top-bar">
     <div>
-     <a href="Trangchu.html">
+     <a href="Trangchu.php">
      <i class="fa-solid fa-house-user"></i>
        Trang chủ
      </a>
-     <a href="Trogiup.html">
+     <a href="Trogiup.php">
      <i class="fa-solid fa-exclamation"></i>
       Trợ giúp
      </a>
-     <a href="Tintuc.html">
+     <a href="Tintuc.php">
      <i class="fa-regular fa-newspaper"></i>
       Tin tức
      </a>
-     <a href="Khuyenmai.html">
+     <a href="Khuyenmai.php">
      <i class="fa-solid fa-tags"></i>
       Khuyến mãi
      </a>
-     <a href="Nhantin.html">
+     <a href="Nhantin.php">
       <i class="fa-regular fa-envelope"></i>
         Nhận tin
       </a>
@@ -41,15 +41,15 @@
      <i class="fa-solid fa-gift"></i>
       Ưu đãi &amp; tiện ích 
      </a>
-     <a href="Kiemtra.html">
+     <a href="Kiemtra.php">
      <i class="fa-solid fa-truck-fast"></i>
       Kiểm tra đơn hàng
      </a>
-     <a href="Dangnhap.html">
+     <a href="Dangnhap.php">
      <i class="fa-solid fa-arrow-right-to-bracket"></i>
       Đăng nhập
      </a>
-     <a href="Dangky.html">
+     <a href="Dangky.php">
      <i class="fa-regular fa-user"></i>
       Đăng ký
      </a>
@@ -210,7 +210,7 @@
       <div class="book-item">
         <img alt="Diệt slime suốt 300 năm - Tập 1" height="200" src="Media/slime.jpg" width="150"/>
        <p>
-        <a href="Truyen1.html">
+        <a href="Truyen1.php">
           Diệt slime suốt 300 năm - Tập 1
         </a>
        </p>
@@ -325,7 +325,7 @@
 </div>
   <div class="container">
     <ul class="pagination">
-        <li><a href="Trangchu.html" class="active">1</a></li>
+        <li><a href="Trangchu.php" class="active">1</a></li>
         <li><a href="#">2</a></li>
         <li><a href="#">3</a></li>
         <li><a href="#">4</a></li>
