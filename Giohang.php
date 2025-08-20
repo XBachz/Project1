@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'cart.php';
+require_once './Model/cart.php';
 
 $cart = new Cart();
 $session_id = session_id();
@@ -47,7 +47,7 @@ if (!empty($cart_items)) {
                             <a href="thongtintaikhoan.php"><i class="fa-solid fa-id-card"></i> Thông tin tài khoản</a>
                             <a href="capnhatthongtin.php"><i class="fa-solid fa-pen-to-square"></i> Cập nhật thông tin</a>
                             <a href="doimatkhau.php"><i class="fa-solid fa-key"></i> Đổi mật khẩu</a>
-                            <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
+                            <a href="Trangchudex.php"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
                         </div>
                     </div>
                 <?php else: ?>

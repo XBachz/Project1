@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'Model/cart.php';
+require_once './Model/cart.php';
 
 $cart = new Cart();
 $session_id = session_id();
@@ -112,11 +112,11 @@ if (!empty($cart_items)) {
   </div>
     <div class="container">
         <div class="product-image">
-         <img alt="Diệt slime suốt 300 năm - Tập 1" height="430" src="Media/slime.jpg" width="500"/>
+         <img alt="Tôi muốn trở thành chúa tể bóng tối" height="430" src="./Media/he.jpg" width="500"/>
         </div>
         <div class="product-details">
          <div class="product-title">
-            Diệt slime suốt 300 năm - Tập 1
+            Tôi muốn trở thành chúa tể bóng tối - Tập 1
          </div>
          <div class="product-author">
             Kisetsu Morita
@@ -139,7 +139,7 @@ if (!empty($cart_items)) {
          <div class="product-tags">
           Tags:
           <span>
-            Diệt slime suốt 300 năm, Truyện tranh Nước Nhật, Isekai, Yuri, Comedy, Action
+             Truyện tranh Nước Nhật, Isekai, Yuri, Comedy, Action
           </span>
          </div>
          <div class="quantity">

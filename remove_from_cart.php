@@ -1,21 +1,21 @@
 <?php
 session_start();
-include("Model/cart.php");
+require_once './Model/cart.php';
 
-if (isset($_GET['product_id'])) {
-    $product_id = $_GET['product_id'];
-    $session_id = session_id();
+$cart = new Cart();
+$session_id = session_id();
 
-    $cart = new Cart();
-    $success = $cart->remove_from_cart_session($session_id, $product_id);
+if (isset($_POST['product_id'])) {
+    $product_id = intval($_POST['product_id']);
 
-    if ($success) {
+    $removed = $cart->remove_from_cart_session($session_id, $product_id);
+
+    if ($removed) {
         header("Location: Giohang.php");
         exit();
     } else {
-        echo "Xóa sản phẩm thất bại!";
+        echo "Sản phẩm không tồn tại trong giỏ hàng.";
     }
 } else {
-    echo "Thiếu dữ liệu!";
+    echo "Thiếu thông tin sản phẩm.";
 }
-?>

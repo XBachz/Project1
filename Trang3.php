@@ -103,10 +103,10 @@ if (!empty($cart_items)) {
             <i class="fas fa-bars"></i> Danh muc san pham
           </button>
           <div class="dropdown-content">
-          <a href="#"> Truyen moi </a>
-          <a href="#"> Truyen Nhat </a>
-          <a href="#"> Light Novel </a>
-          <a href="#"> Truyen Trung </a>
+          <a href="thongtintaikhoan.php"> Truyen moi </a>
+          <a href="capnhatthongtin.php"> Truyen Nhat </a>
+          <a href="doimatkhau.php"> Light Novel </a>
+          <a href="trangchu.php"> Truyen Trung </a>
           </div>
         </div>
    </div>
@@ -206,30 +206,6 @@ if (!empty($cart_items)) {
   </div>
    </div>
    <div class="content">
-    <div class="banner">
-      <a href="Truyen1.php">
-          <img src="Media/bia1.jpg" alt="Banner 1" class="active" />
-      </a>
-      <a href="Truyen2.html">
-          <img src="Media/bia2.jpg" alt="Banner 2" />
-      </a>
-      <a href="Truyen2.html">
-          <img src="Media/bia3.png" alt="Banner 3" />
-      </a>
-  </div>
-  <script>
-    const images = document.querySelectorAll('.banner img');
-    let currentIndex = 0;
-
-    function changeImage() {
-        images[currentIndex].classList.remove('active'); // Ẩn hình ảnh hiện tại
-        currentIndex = (currentIndex + 1) % images.length; // Chuyển đến hình ảnh tiếp theo
-        images[currentIndex].classList.add('active'); // Hiển thị hình ảnh tiếp theo
-    }
-
-    // Chuyển đổi hình ảnh mỗi 3 giây
-    setInterval(changeImage, 4000); // Thay đổi thời gian tại đây (3000 ms )
-    </script>
     <div class="new-books">
      <h3>
       Truyện tranh mới
@@ -367,6 +343,72 @@ if (!empty($cart_items)) {
         44,000đ
        </p>
        </div>
+       <div class="book-item">
+        <a href="Truyen6.html">
+        <img alt="Fly me to the moon - tập 1" height="200" src="Media/fly1.jpg" width="150"/>
+        </a>
+        <p>
+         <a href="Truyen6.html">
+           Fly me to the moon - tập 1
+         </a>
+        </p>
+       <p class="price">
+        44,000đ
+       </p>
+      </div>
+      <div class="book-item">
+        <a href="Truyen7.html">
+        <img alt="Fly me to the moon - tập 4" height="200" src="Media/fly3.jpg" width="150"/>
+        </a>
+        <p>
+         <a href="Truyen7.html">
+           Fly me to the moon - tập 4
+         </a>
+        </p>
+       <p class="price">
+        44,000đ
+       </p>
+      </div>
+      <div class="book-item">
+        <a href="Truyen8.html">
+        <img alt="Fly me to the moon - tập 5" height="200" src="Media/fly4.jpg" width="150"/>
+        </a>
+        <p>
+         <a href="Truyen8.html">
+           Fly me to the moon - tập 5
+         </a>
+        </p>
+       <p class="price">
+        44,000đ
+       </p>
+      </div>
+      <div class="book-item">
+        <a href="Truyen9.html">
+        <img alt="Fly me to the moon - tập 6" height="200" src="Media/fly5.jpg" width="150"/>
+        </a>
+        <p>
+         <a href="Truyen9.html">
+           Fly me to the moon - tập 6
+         </a>
+        </p>
+       <p class="price">
+        44,000đ
+       </p>
+      </div>
+      <div class="book-item">
+        <a href="Truyen10.html">
+        <img alt="Fly me to the moon - tập 7" height="200" src="Media/fly6.jpg" width="150"/>
+        </a>
+        <p>
+         <a href="Truyen10.html">
+           Fly me to the moon - tập 7
+         </a>
+        </p>
+       <p class="price">
+        44,000đ
+       </p>
+       </div>
+      </div>
       </div>
      </div>
     </div>
@@ -375,9 +417,9 @@ if (!empty($cart_items)) {
 </div>
   <div class="container">
     <ul class="pagination">
-        <li><a href="Trangchudex.php" class="active">1</a></li>
-        <li><a href="Trang2.php">2</a></li>
-        <li><a href="Trang3.php">3</a></li>
+        <li><a href="Trangchudex.php" > 1 </a></li>
+        <li><a href="Trang2.php"> 2 </a></li>
+        <li><a href="Trang3.php" class="active">3</a></li>
         <li><a href="#">4</a></li>
         <li><a href="#">5</a></li>
         <li><a href="#">...</a></li>

@@ -1,3 +1,18 @@
+<?php
+session_start();
+require_once 'Model/cart.php';
+
+$cart = new Cart();
+$session_id = session_id();
+$cart_items = $cart->get_cart_items_session($session_id);
+
+$totalQuantity = 0;
+if (!empty($cart_items)) {
+    foreach ($cart_items as $item) {
+        $totalQuantity += (int)$item['quantity'];
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -131,19 +146,42 @@
           </span>
          </div>
          <div class="quantity">
-          Số Lượng:
-          <button>
-           -
-          </button>
-          <input type="text" value="1"/>
-          <button>
-           +
-          </button>
-         </div>
-         <div class="buttons">
-          <button class="add-to-cart">
-            <a href="Giohang.html" style="color: #ff6600 " >THÊM VÀO GIỎ HÀNG </a>
-           </button>
+           Số Lượng:
+  <button type="button" id="decrease">-</button>
+  <input type="text" id="quantity-input" value="1" readonly style="width: 40px; text-align: center;"/>
+  <button type="button" id="increase">+</button>
+</div>
+<script>
+  const input = document.getElementById('quantity-input');
+  const increaseBtn = document.getElementById('increase');
+  const decreaseBtn = document.getElementById('decrease');
+
+  increaseBtn.addEventListener('click', () => {
+    let currentValue = parseInt(input.value);
+    input.value = currentValue + 1;
+  });
+
+  decreaseBtn.addEventListener('click', () => {
+    let currentValue = parseInt(input.value);
+    if (currentValue > 1) {
+      input.value = currentValue - 1;
+    }
+  });
+  const addToCartButton = document.querySelector('.add-to-cart');
+const quantityInput = document.getElementById('quantity-input');
+const quantityInputHidden = document.getElementById('quantity-input-hidden');
+
+addToCartButton.addEventListener('click', (event) => {
+    quantityInputHidden.value = quantityInput.value;
+});
+</script>
+        <div class="buttons">
+    <form action="add_to_cart.php" method="post">
+        <input type="hidden" name="product_id" value="1"> <input type="hidden" name="quantity" id="quantity-input-hidden" value="1">
+        <button type="submit" class="add-to-cart">
+            THÊM VÀO GIỎ HÀNG
+        </button>
+    </form>
           <button class="buy-now">
            MUA NGAY
           </button>
