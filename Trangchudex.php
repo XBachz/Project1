@@ -18,7 +18,7 @@ if (!empty($cart_items)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/Trang1.css">
     <link rel="stylesheet" href="font/css/all.css">
     <base herf="http://127.0.0.1:5500/Trangchu.html">
@@ -32,6 +32,16 @@ if (!empty($cart_items)) {
     }
 ?>
  <body>
+  <script>
+window.addEventListener("scroll", function() {
+    const header = document.querySelector(".header");
+    if (window.scrollY > 20) {
+        header.classList.add("shrink");
+    } else {
+        header.classList.remove("shrink");
+    }
+});
+</script>
   <div class="header">
    <div class="top-bar">
     <div>
@@ -238,135 +248,176 @@ if (!empty($cart_items)) {
      <div class="top-bar1">
      <div class="book-list">
       <div class="book-item">
-  <a href="Truyen1.php">
-    <img alt="Diệt slime suốt 300 năm - Tập 1" height="200" src="Media/slime.jpg" width="150"/>
-  </a>
-  <p>
-    <a href="Truyen1.php">
-      Diệt slime suốt 300 năm - Tập 1
-    </a>
-  </p>
-  <p class="price">
-    43,000đ
-  </p>
+    <div class="book-image-wrapper">
+        <img src="Media/slime.jpg" alt="Diệt slime suốt 300 năm - Tập 1">
+        
+        <div class="hover-info">
+            <h3>Diệt slime suốt 300 năm - Tập 1</h3>
+            <p><strong>Tác giả:</strong> Kisetsu Morita</p>
+            <p><strong>Mô tả:</strong> Đây là truyện Nhật</p>
+            <p><strong>Giá:</strong> 43,000đ</p>
+            <a href="Truyen1.php" class="btn-detail">Xem chi tiết</a>
+        </div>
+    </div>
+
+    <p class="title">
+        <a href="Truyen1.php">Diệt slime suốt 300 năm - Tập 1</a>
+    </p>
+    <p class="price">43,000đ</p>
+</div>
+       <div class="book-item">
+    <div class="book-image-wrapper">
+        <img src="Media/slime2.jpg" alt="Diệt slime suốt 300 năm - Tập 1">
+        
+        <div class="hover-info">
+            <h3>Diệt slime suốt 300 năm - Tập 2</h3>
+            <p><strong>Tác giả:</strong> Kisetsu Morita</p>
+            <p><strong>Giá:</strong> 43,000đ</p>
+            <a href="Truyen2.php" class="btn-detail">Xem chi tiết</a>
+        </div>
+    </div>
+
+    <p class="title">
+        <a href="Truyen2.php">Diệt slime suốt 300 năm - Tập 2</a>
+    </p>
+    <p class="price">43,000đ</p>
+</div>
+       <div class="book-item">
+    <div class="book-image-wrapper">
+        <img src="Media/slime4.jpg" alt="Diệt slime suốt 300 năm - Tập 1">
+        
+        <div class="hover-info">
+            <h3>Diệt slime suốt 300 năm - Tập 4</h3>
+            <p><strong>Tác giả:</strong> Kisetsu Morita</p>
+            <p><strong>Giá:</strong> 43,000đ</p>
+            <a href="Truyen3.php" class="btn-detail">Xem chi tiết</a>
+        </div>
+    </div>
+
+    <p class="title">
+        <a href="Truyen3.php">Diệt slime suốt 300 năm - Tập </a>
+    </p>
+    <p class="price">43,000đ</p>
+</div>
+       <div class="book-item">
+    <div class="book-image-wrapper">
+        <img src="Media/slime6.jpg" alt="Diệt slime suốt 300 năm - Tập 1">
+        
+        <div class="hover-info">
+            <h3>Diệt slime suốt 300 năm - Tập 6</h3>
+            <p><strong>Tác giả:</strong> Kisetsu Morita</p>
+            <p><strong>Giá:</strong> 43,000đ</p>
+            <a href="Truyen4.php" class="btn-detail">Xem chi tiết</a>
+        </div>
+    </div>
+
+    <p class="title">
+        <a href="Truyen4.php">Diệt slime suốt 300 năm - Tập 6</a>
+    </p>
+    <p class="price">43,000đ</p>
+</div>
+       <div class="book-item">
+    <div class="book-image-wrapper">
+        <img src="Media/slime7.jpg" alt="Diệt slime suốt 300 năm - Tập 1">
+        
+        <div class="hover-info">
+            <h3>Diệt slime suốt 300 năm - Tập 7</h3>
+            <p><strong>Tác giả:</strong> Kisetsu Morita</p>
+            <p><strong>Giá:</strong> 43,000đ</p>
+            <a href="Truyen5.php" class="btn-detail">Xem chi tiết</a>
+        </div>
+    </div>
+
+    <p class="title">
+        <a href="Truyen5.php">Diệt slime suốt 300 năm - Tập 7</a>
+    </p>
+    <p class="price">43,000đ</p>
+</div>
+       <div class="book-item">
+    <div class="book-image-wrapper">
+        <img src="Media/fly1.jpg" alt="Fly me to the moon - Tập 1">
+        
+        <div class="hover-info">
+            <h3>Fly me to the moon - Tập 1</h3>
+            <p><strong>Tác giả:</strong> Hata Kenjiro</p>
+            <p><strong>Giá:</strong> 44,000đ</p>
+            <a href="Truyen6.php" class="btn-detail">Xem chi tiết</a>
+        </div>
+    </div>
+
+    <p class="title">
+        <a href="Truyen6.php">Fly me to the moon - Tập 1</a>
+    </p>
+    <p class="price">43,000đ</p>
+</div>
+       <div class="book-item">
+    <div class="book-image-wrapper">
+        <img src="Media/fly3.jpg" alt="Fly me to the moon - Tập 4">
+        
+        <div class="hover-info">
+            <h3>Fly me to the moon - Tập 4</h3>
+            <p><strong>Tác giả:</strong> Hata Kenjiro</p>
+            <p><strong>Giá:</strong> 44,000đ</p>
+            <a href="Truyen7.php" class="btn-detail">Xem chi tiết</a>
+        </div>
+    </div>
+
+    <p class="title">
+        <a href="Truyen7.php">Fly me to the moon - Tập 4</a>
+    </p>
+    <p class="price">43,000đ</p>
+</div>
+       <div class="book-item">
+    <div class="book-image-wrapper">
+        <img src="Media/fly4.jpg" alt="Fly me to the moon - Tập 1">
+        
+        <div class="hover-info">
+            <h3>Fly me to the moon - Tập 5</h3>
+            <p><strong>Tác giả:</strong> Hata Kenjiro</p>
+            <p><strong>Giá:</strong> 44,000đ</p>
+            <a href="Truyen8.php" class="btn-detail">Xem chi tiết</a>
+        </div>
+    </div>
+
+    <p class="title">
+        <a href="Truyen8.php">Fly me to the moon - Tập 5</a>
+    </p>
+    <p class="price">43,000đ</p>
 </div>
       <div class="book-item">
-      <a href="Truyen2.php">
-       <img alt="Diệt slime suốt 300 năm - Tập 2" height="200" src="Media/slime2.jpg" width="150"/>
-      </a>
-       <p>
-        <a href="Truyen2.php">
-          Diệt slime suốt 300 năm - Tập 2
-        </a>
-       </p>
-       <p class="price">
-        43,000đ
-       </p>
-      </div>
-      <div class="book-item">
-         <a href="Truyen3.html">
-        <img alt="Diệt slime suốt 300 năm - Tập 4" height="200" src="Media/slime4.jpg" width="150"/>
-      </a>
-        <p>
-         <a href="Truyen3.html">
-           Diệt slime suốt 300 năm - Tập 4
-         </a>
-        </p>
-       <p class="price">
-        43,000đ
-       </p>
-      </div>
-      <div class="book-item">
-        <a href="Truyen4.html">
-        <img alt="Diệt slime suốt 300 năm - Tập 6" height="200" src="Media/slime6.jpg" width="150"/>
-        </a>
-        <p>
-         <a href="Truyen4.html">
-           Diệt slime suốt 300 năm - Tập 6
-         </a>
-        </p>
-       <p class="price">
-        43,000đ
-       </p>
-      </div>
-      <div class="book-item">
-        <a href="Truyen5.html">
-        <img alt="Diệt slime suốt 300 năm - Tập 7" height="200" src="Media/slime7.jpg" width="150"/>
-        </a>
-        <p>
-         <a href="Truyen5.html">
-           Diệt slime suốt 300 năm - Tập 7
-         </a>
-        </p>
-       <p class="price">
-        43,000đ
-       </p>
-      </div>
-      <div class="book-item">
-        <a href="Truyen6.html">
-        <img alt="Fly me to the moon - tập 1" height="200" src="Media/fly1.jpg" width="150"/>
-        </a>
-        <p>
-         <a href="Truyen6.html">
-           Fly me to the moon - tập 1
-         </a>
-        </p>
-       <p class="price">
-        44,000đ
-       </p>
-      </div>
-      <div class="book-item">
-        <a href="Truyen7.html">
-        <img alt="Fly me to the moon - tập 4" height="200" src="Media/fly3.jpg" width="150"/>
-        </a>
-        <p>
-         <a href="Truyen7.html">
-           Fly me to the moon - tập 4
-         </a>
-        </p>
-       <p class="price">
-        44,000đ
-       </p>
-      </div>
-      <div class="book-item">
-        <a href="Truyen8.html">
-        <img alt="Fly me to the moon - tập 5" height="200" src="Media/fly4.jpg" width="150"/>
-        </a>
-        <p>
-         <a href="Truyen8.html">
-           Fly me to the moon - tập 5
-         </a>
-        </p>
-       <p class="price">
-        44,000đ
-       </p>
-      </div>
-      <div class="book-item">
-        <a href="Truyen9.html">
-        <img alt="Fly me to the moon - tập 6" height="200" src="Media/fly5.jpg" width="150"/>
-        </a>
-        <p>
-         <a href="Truyen9.html">
-           Fly me to the moon - tập 6
-         </a>
-        </p>
-       <p class="price">
-        44,000đ
-       </p>
-      </div>
-      <div class="book-item">
-        <a href="Truyen10.html">
-        <img alt="Fly me to the moon - tập 7" height="200" src="Media/fly6.jpg" width="150"/>
-        </a>
-        <p>
-         <a href="Truyen10.html">
-           Fly me to the moon - tập 7
-         </a>
-        </p>
-       <p class="price">
-        44,000đ
-       </p>
-       </div>
+    <div class="book-image-wrapper">
+        <img src="Media/fly5.jpg" alt="Fly me to the moon - Tập 1">
+        
+        <div class="hover-info">
+            <h3>Fly me to the moon - Tập 6</h3>
+            <p><strong>Tác giả:</strong> Hata Kenjiro</p>
+            <p><strong>Giá:</strong> 44,000đ</p>
+            <a href="Truyen9.php" class="btn-detail">Xem chi tiết</a>
+        </div>
+    </div>
+
+    <p class="title">
+        <a href="Truyen9.php">Fly me to the moon - Tập 6</a>
+    </p>
+    <p class="price">43,000đ</p>
+</div>
+       <div class="book-item">
+    <div class="book-image-wrapper">
+        <img src="Media/fly6.jpg" alt="Fly me to the moon - Tập 1">
+        
+        <div class="hover-info">
+            <h3>Fly me to the moon - Tập 7</h3>
+            <p><strong>Tác giả:</strong> Hata Kenjiro</p>
+            <p><strong>Giá:</strong> 44,000đ</p>
+            <a href="Truyen10.php" class="btn-detail">Xem chi tiết</a>
+        </div>
+    </div>
+
+    <p class="title">
+        <a href="Truyen10.php">Fly me to the moon - Tập 7</a>
+    </p>
+    <p class="price">43,000đ</p>
+</div>
       </div>
      </div>
     </div>
